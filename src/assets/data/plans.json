@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "description": "Descubre un refugio de tranquilidad y romance en nuestro exclusivo spa para parejas. Imagina un lugar donde tú y tu pareja pueden escapar del estrés cotidiano y sumergirse en un mundo de relajación total.",
+        "duration": "1 Hora 30 minutos",
+        "price": 139900,
+        "name": "PLAN EUCASOL",
+        "cuantity": 2,
+        "imgPath": "/assets/img/eucasol.png",
+        "category": 1,
+        "additionalServicesId": [101,105,103,111,112,113,106,109,106]
+    },
+    {
+        "id": 2,
+        "description": "Delicadeza, belleza y armonía se unen en este plan inspirado en la rosa. Ideal para quienes desean mimarse o celebrar un momento especial con un toque romántico. Déjate envolver por aromas florales y sensaciones suaves que reconectan con lo femenino y lo emocional.",
+        "duration": "1 Hora 50 minutos",
+        "price": 169900,
+        "name": "PLAN ROSALINA",
+        "cuantity": 2,
+        "imgPath": "/assets/img/rosalina.png",
+        "category": 1,
+        "additionalServicesId": [101,105,114,104,110,115,102,106,109,108]
+    },
+    {
+        "id": 3,
+        "description": "Este plan ofrece una experiencia profundamente calmante, perfecta para quienes buscan descanso físico y emocional. Inspirado en las propiedades relajantes de la malva, proporciona suavidad a tu piel y serenidad a tu alma, envolviéndote en un entorno de paz total..",
+        "duration": "2 Horas 10 minutos",
+        "price": 209900,
+        "name": "PLAN MALVA",
+        "cuantity": 2,
+        "imgPath": "/assets/img/malva.png",
+        "category": 1,
+        "additionalServicesId": [101,105,114,104,116,113,115,117,118,106,109,107,108]
+    },
+    {
+        "id": 4,
+        "description": "Déjate llevar por el aroma seductor del jazmín en un viaje de relajación y alegría. Este plan es perfecto para elevar tu estado de ánimo, suavizar tensiones y vivir una experiencia sensorial romántica y floral, ideal para compartir en pareja o disfrutar en solitario.",
+        "duration": "2 Horas 20 minutos",
+        "price": 229900,
+        "name": "PLAN JAZMIN",
+        "cuantity": 2,
+        "imgPath": "/assets/img/jazmin.png",
+        "category": 1,
+        "additionalServicesId": [101,105,114,122,113,120,121,117,106,109,107,108]
+    },
+    {
+        "id": 5,
+        "description": "Renueva tu energía con este plan inspirado en la piedra de la espiritualidad. Diseñado para equilibrar tus emociones y aliviar el estrés acumulado, es ideal para quienes desean reconectar con su esencia interior en un ambiente cálido y lleno de intención.",
+        "duration": "1 Hora 50 minutos",
+        "price": 239900,
+        "name": "PLAN AMATISTA",
+        "cuantity": 2,
+        "imgPath": "/assets/img/amatista.png",
+        "category": 1,
+        "additionalServicesId": [123,105,114,115,124,104,106,109,110,108]
+    },
+    {
+        "id": 6,
+        "description": "Inspirado en la flor del naranjo, este plan brinda un equilibrio entre frescura y dulzura. Ideal para quienes necesitan un momento de renovación emocional, con beneficios que calman la ansiedad y despiertan una sensación de bienestar profundo.",
+        "duration": "3 Horas",
+        "price": 329900,
+        "name": "PLAN NEROLI",
+        "cuantity": 2,
+        "imgPath": "/assets/img/neroli.png",
+        "category": 1,
+        "additionalServicesId": [101,105,114,122,113,115,117,125, 118,126,117,106,109,107,108,128]
+    },
+    {
+        "id": 7,
+        "description": "Sumérgete en una experiencia tropical de relajación profunda. El plan Hawai está inspirado en los paisajes exóticos y la energía vibrante de las islas del Pacífico. Vive un momento de escape total, donde el cuerpo se libera del estrés y la mente se llena de paz y frescura.",
+        "duration": "45 Minutos",
+        "price": 69900,
+        "name": "PLAN HAWAI",
+        "cuantity": 1,
+        "imgPath": "/assets/img/hawai.png",
+        "category": 0,
+        "additionalServicesId": [114,127,129,105,106,109,108]
+    } ,
+    {
+        "id": 8,
+        "description": "Descubre el alma de África con este plan lleno de sensaciones cálidas, aromas intensos y conexión profunda con tu bienestar interior. Rwanda te invita a experimentar una travesía sensorial que despierta el cuerpo y calma el espíritu, en un entorno de calidez y armonía.",
+        "duration": "1 Hora 10 Minutos",
+        "price": 109900,
+        "name": "PLAN RWANDA",
+        "cuantity": 1,
+        "imgPath": "/assets/img/rwanda.png",
+        "category": 0,
+        "additionalServicesId": [101, 103,104, 107, 105, 113,106,109, 108]
+    },
+    {
+        "id": 9,
+        "description": "Inspirado en la piedra preciosa de la transformación, este plan te lleva por un camino de equilibrio y renovación. Alejandrita combina técnicas terapéuticas y un ambiente sofisticado para brindarte una experiencia de cambio interno, serenidad y belleza.",
+        "duration": "2 Horas 30 Minutos",
+        "price": 149900,
+        "name": "PLAN ALEJANDRITA",
+        "cuantity": 1,
+        "imgPath": "/assets/img/alejandrita.png",
+        "category": 0,
+        "additionalServicesId": [101,103,104,115, 105,122, 117, 118,106,109,124,108]
+    },
+    {
+        "id": 10,
+        "description": "Déjate envolver por la energía intensa del granate. Este plan está diseñado para grupos pequeños o experiencias compartidas que despiertan vitalidad, pasión y fuerza interior. Granate 3 combina relajación y conexión en un ambiente cuidadosamente ambientado.",
+        "duration": "2 Horas",
+        "price": 259900,
+        "name": "PLAN GRANATE 3",
+        "cuantity": 3,
+        "imgPath": "/assets/img/granate3.png",
+        "category": 2,
+        "additionalServicesId": [101,103,104,115,105, 113, 130,131,107,106,109,132]
+    },
+    {
+        "id": 11,
+        "description": "Diseñado para compartir en grupo, el plan Granate 4 ofrece una experiencia completa de relajación y armonía para cuatro personas. Con sesiones que equilibran cuerpo y mente, es perfecto para celebrar momentos especiales o simplemente disfrutar con quienes más quieres.",
+        "duration": "2 Horas",
+        "price": 259900,
+        "name": "PLAN GRANATE 4",
+        "cuantity": 4,
+        "imgPath": "/assets/img/granate4.png",
+        "category": 2,
+        "additionalServicesId": [101,103,104,115,105, 113, 130,131,107,106,109,132,133]
+    } 
+]

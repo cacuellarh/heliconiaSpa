@@ -1,0 +1,36 @@
+<div class="flex flex-col w-full gap-20">
+  <h1 class="text-center text-[3rem] font-messiri text-primary font-bold">
+    Conoce nuestros planes
+  </h1>
+
+  <div class="flex flex-col lg:flex-row max-w-full mx_base_mobile lg:mx-40 justify-center lg:justify-between gap-5 lg:gap-0">
+    <app-card-plan-section
+      [description]="
+        'Inspirado en la flor del naranjo, este plan brinda un equilibrio entre frescura y dulzura. Ideal para quienes necesitan un momento de renovación emocional, con beneficios que calman la ansiedad y despiertan una sensación de bienestar profundo.'
+      "
+      [imgPath]="'assets/img/neroli.png'"
+      [tittle]="'NEROLI'"
+    ></app-card-plan-section>
+
+    <div class="w-[1px] bg-gray-300"></div>
+    <app-card-plan-section
+      [description]="'Sumérgete en una experiencia revitalizante con el poder del eucalipto. Este plan está diseñado para despejar tu mente, aliviar la tensión y renovar tus sentidos. Ideal para quienes buscan equilibrio entre cuerpo y respiración, en un ambiente fresco y renovador.'"
+      [imgPath]="'assets/img/eucasol.png'"
+      [tittle]="'EUCASOL'"
+    ></app-card-plan-section>
+    <div class="w-[1px] bg-gray-300"></div>
+    <app-card-plan-section
+      [description]="'Delicadeza, belleza y armonía se unen en este plan inspirado en la rosa. Ideal para quienes desean mimarse o celebrar un momento especial con un toque romántico. Déjate envolver por aromas florales y sensaciones suaves que reconectan con lo femenino y lo emocional.'"
+      [imgPath]="'assets/img/rosalina.png'"
+      [tittle]="'ROSALIA'"
+    ></app-card-plan-section>
+  </div>
+
+  <app-separator></app-separator>
+  <div class="w-full h-[10rem] bg-[url('assets/img/plans_footer.png')] bg-cover bg-center flex justify-center items-center">
+
+    <a id="us" routerLink="/planes/" class="cursor-pointer p-4 border-2 border-primary rounded-3xl font-jost text-primary base_transition hover:bg-primary hover:text-bg">
+        VER TODOS LOS PLANES
+    </a>
+  </div>
+</div>

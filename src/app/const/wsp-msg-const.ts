@@ -1,0 +1,1 @@
+export const whatsappMsgDefault : string = "https://api.whatsapp.com/send/?phone=573052512396&text=Hola+Heliconia+Spa+boutique.+Necesito+m%C3%A1s+informaci%C3%B3n+sobre+Somos+Heliconia+Spa+boutique+Neiva+Colombia&type=phone_number&app_absent=0";

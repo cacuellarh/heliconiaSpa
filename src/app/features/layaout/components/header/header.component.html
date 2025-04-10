@@ -1,0 +1,74 @@
+<nav class="w-full fixed z-20 shadow-2xl">
+  <div class="flex bg-bg h-14 items-center px-20 justify-center gap-52">
+    <a
+      target="_blank"
+      href="{{ wspMsg }}"
+      class="hidden lg:flex lg:gap-2 font-jost text-primary font-bold lg:items-center"
+      ><img src="assets/icons/whatsapp2.png" class="w-4 h-4" alt="" />
+      319-259-3098 | Mejor tarifa garantizada</a
+    >
+    <img src="assets/img/logo.png" class="w-20" alt="" />
+    <a href="" class="hidden lg:block font-jost text-primary font-light"
+      >MEMBERS SIGN IN</a
+    >
+    <a class="action_btn hidden lg:block" routerLink="/planes">RESERVAR</a>
+    <a class="block lg:hidden cursor-pointer" (click)="openMenu()"
+      ><img src="assets/icons/menu.png" class="w-10" alt=""
+    /></a>
+  </div>
+  <div
+    class="justify-center h-auto lg:h-14 bg-primary items-center hidden lg:flex"
+  >
+    <ul
+      class="flex flex-col py-5 lg:py-0 lg:flex-row gap-5 lg:gap-20 h-full w-full lg:w-auto"
+    >
+      <li class="menu_options">
+        <a appElementActive class="a_option" href="#main">INICIO</a>
+      </li>
+      <li class="menu_options" routerLink="/planes">
+        <a appElementActive class="a_option">PLANES</a>
+      </li>
+      <li class="menu_options">
+        <a appElementActive href="#us" class="a_option">QUIENES SOMOS</a>
+      </li>
+      <li class="menu_options">
+        <a appElementActive href="#location" class="a_option">UBICACION</a>
+      </li>
+      <li class="menu_options" routerLink="/politicas_reserva/">
+        <a appElementActive class="a_option">POLITICAS DE RESERVA</a>
+      </li>
+      <li class="menu_options"><a href="" class="a_option">BOUTIQUE</a></li>
+    </ul>
+  </div>
+
+  <!-- //MOBILE MENU -->
+  <div
+    *ngIf="menuStatus === MenuStatus.Open"
+    class="flex justify-center h-auto lg:h-14 bg-primary items-center"
+  >
+    <ul
+      class="flex flex-col py-5 lg:py-0 lg:flex-row gap-5 lg:gap-20 h-full w-full lg:w-auto"
+    >
+      <li class="menu_options" (click)="closedMenu()">
+        <a appElementActive class="a_option" href="#main">INICIO</a>
+      </li>
+      <li class="menu_options" routerLink="/planes" (click)="closedMenu()">
+        <a appElementActive class="a_option">PLANES</a>
+      </li>
+      <li class="menu_options" (click)="closedMenu()">
+        <a appElementActive href="#us" class="a_option">QUIENES SOMOS</a>
+      </li>
+      <li class="menu_options" (click)="closedMenu()">
+        <a appElementActive href="#location" class="a_option">UBICACION</a>
+      </li>
+      <li
+        class="menu_options"
+        routerLink="/politicas_reserva/"
+        (click)="closedMenu()"
+      >
+        <a appElementActive class="a_option">POLITICAS DE RESERVA</a>
+      </li>
+      <li class="menu_options"><a href="" class="a_option">BOUTIQUE</a></li>
+    </ul>
+  </div>
+</nav>

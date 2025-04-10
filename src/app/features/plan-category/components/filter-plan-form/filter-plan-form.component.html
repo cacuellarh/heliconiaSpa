@@ -1,0 +1,23 @@
+<form [formGroup]="filterPlanForm" class="flex flex-col gap-5 mt-5" (ngSubmit)="onSumbit()">
+  <label for="">Precio</label>
+  <select name="" formControlName="range" class="h-10">
+    <option value="" disabled selected hidden>Seleccione un rango</option>
+    <option *ngFor="let range of priceRanges" [ngValue]="range" selected>
+      {{ range.description }}
+    </option>
+  </select>
+
+  <label for="">Servicio</label>
+  <select name="" id="" formControlName="service" class="h-10">
+    <option value="" disabled selected hidden>Seleccione un servicio</option>
+    <option
+      *ngFor="let service of additionalServices"
+      [ngValue]="service"
+      selected
+    >
+      {{ service.name }}
+    </option>
+  </select>
+
+  <button class="action_btn" type="submit">Filtrar</button>
+</form>
