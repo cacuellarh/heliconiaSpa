@@ -1,5 +1,5 @@
 <nav class="w-full fixed z-20 shadow-2xl">
-  <div class="flex bg-bg h-14 items-center px-20 justify-center gap-52">
+  <div class="flex bg-bg h-14 items-center px-10 lg:px-20 justify-between lg:justify-center lg:gap-52">
     <a
       target="_blank"
       href="{{ wspMsg }}"
@@ -12,7 +12,8 @@
       >MEMBERS SIGN IN</a
     >
     <a class="action_btn hidden lg:block" routerLink="/planes">RESERVAR</a>
-    <a class="block lg:hidden cursor-pointer" (click)="openMenu()"
+
+    <a class=" lg:hidden cursor-pointer" (click)="openMenu()"
       ><img src="assets/icons/menu.png" class="w-10" alt=""
     /></a>
   </div>
