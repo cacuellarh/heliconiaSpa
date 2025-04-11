@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { PlanDto } from '../dto/plan-dto';
 import { AdditionalServiceDto } from '../dto/AdditionalService-dto';
-import { filter, forkJoin, map, Observable } from 'rxjs';
+import { forkJoin, map, Observable } from 'rxjs';
 import { CategoryType } from '../types/category-type';
 import { PriceRangeDto } from '../dto/priceRange-dto';
 import { FilterPlansRequest } from '../types/filterPlans-request';
@@ -12,7 +12,15 @@ import { FilterPlansRequest } from '../types/filterPlans-request';
 })
 export class PlanService {
   private httpService: HttpClient = inject(HttpClient);
+  private _planDetails = signal<PlanDto | null>(null);
 
+  get planDetails(){
+    return this._planDetails
+  }
+
+  setPlanDetails(plan : PlanDto){
+    this._planDetails.set(plan)
+  }
   getPlans(): Observable<PlanDto[]> {
     return forkJoin({
       plans: this.httpService.get<PlanDto[]>('assets/data/plans.json'),
@@ -70,4 +78,5 @@ export class PlanService {
       )
     );
   }
+
 }

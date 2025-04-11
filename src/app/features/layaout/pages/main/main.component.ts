@@ -5,6 +5,7 @@ import { UsComponent } from '../us/us.component';
 import { SeparatorComponent } from '../../components/separator/separator.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { WhatsappApiComponent } from "../../components/whatsapp-api/whatsapp-api.component";
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { WhatsappApiComponent } from "../../components/whatsapp-api/whatsapp-api
     UsComponent,
     SeparatorComponent,
     FooterComponent,
-    WhatsappApiComponent
+    WhatsappApiComponent,
+    RouterModule
 ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'

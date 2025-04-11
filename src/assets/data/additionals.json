@@ -21,12 +21,12 @@
       },
       {
         "id": 105,
-        "iconPath": "/assets/icons/aceite.png",
+        "iconPath": "/assets/icons/piedras.png",
         "name": "Piedras volcanicas"
       },
       {
         "id": 106,
-        "iconPath": "/assets/icons/aceite.png",
+        "iconPath": "/assets/icons/musicoterapia.png",
         "name": "Musicoterapia"
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "id": 109,
-        "iconPath": "/assets/icons/vino.png",
+        "iconPath": "/assets/icons/aromaterapia.png",
         "name": "Aromaterapia"
       },
       {
@@ -126,7 +126,7 @@
       },
       {
         "id": 127,
-        "iconPath": "/assets/icons/sal.png",
+        "iconPath": "/assets/icons/aceite.png",
         "name": "Fino coctel de aceites"
       },
       {
@@ -136,7 +136,7 @@
       },
       {
         "id": 129,
-        "iconPath": "/assets/icons/meditacion.png",
+        "iconPath": "/assets/icons/sales.png",
         "name": "Reflexologia"
       },
       {

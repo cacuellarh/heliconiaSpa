@@ -1,5 +1,5 @@
-<nav class="w-full fixed z-20 shadow-2xl">
-  <div class="flex bg-bg h-14 items-center px-10 lg:px-20 justify-between lg:justify-center lg:gap-52">
+<nav class="w-full fixed z-20 shadow-lg">
+  <div class="flex bg-bg h-16 lg:h-14 items-center lg:py-0 px-10 lg:px-20 justify-between lg:justify-center lg:gap-52">
     <a
       target="_blank"
       href="{{ wspMsg }}"
@@ -7,15 +7,22 @@
       ><img src="assets/icons/whatsapp2.png" class="w-4 h-4" alt="" />
       319-259-3098 | Mejor tarifa garantizada</a
     >
-    <img src="assets/img/logo.png" class="w-20" alt="" />
+    <a routerLink="/"><img src="assets/img/logo.png" class="w-20" alt="" /></a>
+    
     <a href="" class="hidden lg:block font-jost text-primary font-light"
       >MEMBERS SIGN IN</a
     >
     <a class="action_btn hidden lg:block" routerLink="/planes">RESERVAR</a>
 
     <a class=" lg:hidden cursor-pointer" (click)="openMenu()"
-      ><img src="assets/icons/menu.png" class="w-10" alt=""
-    /></a>
+      >
+      @if(menuStatus === MenuStatus.Closed){
+
+        <img src="assets/icons/menu.png" class="w-7" alt=""/>
+      }@else {
+        <img src="assets/icons/cerrar.png" class="w-6" alt=""/>
+      }
+      </a>
   </div>
   <div
     class="justify-center h-auto lg:h-14 bg-primary items-center hidden lg:flex"
