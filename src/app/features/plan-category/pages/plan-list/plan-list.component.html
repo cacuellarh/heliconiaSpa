@@ -4,7 +4,7 @@
   
   <div class="flex flex-col lg:flex-row gap-16">
     <!-- MENU CATEGORIAS -->
-    <div class="flex flex-col w-full lg:w-80">
+    <div class="flex flex-col w-full lg:w-96 overflow-hidden">
       <div action="" class="flex w-full">
         <input
           type="text"
@@ -22,21 +22,21 @@
             CATEGORIA DE PLANES
           </li>
           <li
-            class="h-16 font-jost text-primary flex justify-between px-3 cursor-pointer select-none items-center"
+            class="h-16 font-jost text-primary flex justify-between px-5 cursor-pointer select-none items-center"
             (click)="selectCategory(CategoryType.Individual)"
             appElementActive
           >
             <a>Individual</a> <small>3</small>
           </li>
           <li
-            class="h-16 font-jost text-primary flex justify-between px-3 cursor-pointer select-none items-center"
+            class="h-16 font-jost text-primary flex justify-between px-5  cursor-pointer select-none items-center"
             (click)="selectCategory(CategoryType.Couple)"
             appElementActive
           >
             <a>Pareja</a> <small>5</small>
           </li>
           <li
-            class="h-16 font-jost text-primary flex justify-between px-3 cursor-pointer select-none items-center"
+            class="h-16 font-jost text-primary flex justify-between px-5  cursor-pointer select-none items-center"
             (click)="selectCategory(CategoryType.Group)"
             appElementActive
           >
@@ -45,8 +45,14 @@
         </ul>
   
         <hr class="bg-gray-300 h-[0.1rem]" />
-  
-        <app-filter-plan-form
+        <br>
+        <div class="flex justify-between px-5">
+          <h1 class="font-jost text-primary font-bold">Filtrar</h1>
+          <img src="assets/icons/filtrar.png" class="w-7 cursor-pointer" alt="" (click)="openFilterForm()">
+        </div>
+
+        <app-filter-plan-form 
+          *ngIf="filterStatus === ElementStatustype.SHOW"
           (onSubmitForm)="filterPlans($event)"
         ></app-filter-plan-form>
       </div>
@@ -60,7 +66,7 @@
       </h1>
     </div>
     } @else {
-    <div class="grid grid-cols-1 lg:grid-cols-4 w-full h-auto gap-12 place-items-center lg:place-content-start">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-auto gap-12 place-items-center lg:place-content-start">
       <app-plan-card
         [imgPath]="plan.imgPath"
         [name]="plan.name"

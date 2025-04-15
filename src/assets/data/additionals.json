@@ -16,7 +16,7 @@
       },
       {
         "id": 104,
-        "iconPath": "/assets/icons/sal.png",
+        "iconPath": "/assets/icons/aceites_escenciales.png",
         "name": "Coctel de aceites"
       },
       {
@@ -46,7 +46,7 @@
       },
       {
         "id": 110,
-        "iconPath": "/assets/icons/cambu.png",
+        "iconPath": "/assets/icons/bambu.png",
         "name": "Bambuterapia"
       },
       {
@@ -61,7 +61,7 @@
       },
       {
         "id": 113,
-        "iconPath": "/assets/icons/sal.png",
+        "iconPath": "/assets/icons/sales.png",
         "name": "Exfoliacion con sales"
       },
       {

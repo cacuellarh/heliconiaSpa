@@ -8,8 +8,11 @@ import { PlanCardComponent } from '../../components/plan-card/plan-card.componen
 import { CommonModule } from '@angular/common';
 import { FilterPlanFormComponent } from '../../components/filter-plan-form/filter-plan-form.component';
 import { FormsModule } from '@angular/forms';
-import { ElementActiveDirective, ElementActiveService } from '@c-code/c-code-fw';
-
+import {
+  ElementActiveDirective,
+  ElementActiveService,
+} from '@c-code/c-code-fw';
+import { ElementStatusType } from '../../../../commond/types/ElementStatus-type';
 
 @Component({
   selector: 'app-plan-list',
@@ -22,7 +25,7 @@ import { ElementActiveDirective, ElementActiveService } from '@c-code/c-code-fw'
   ],
   templateUrl: './plan-list.component.html',
   styleUrl: './plan-list.component.css',
-  providers:[ElementActiveService]
+  providers: [ElementActiveService],
 })
 export class PlanListComponent {
   private planService: PlanService = inject(PlanService);
@@ -31,6 +34,8 @@ export class PlanListComponent {
   public categorySelected: CategoryType = CategoryType.Individual;
   public CategoryType = CategoryType;
   public filterByPlanName: string = '';
+  public ElementStatustype = ElementStatusType;
+  public filterStatus: ElementStatusType = ElementStatusType.HIDDEN;
 
   ngOnInit() {
     this.getPlans(this.categorySelected);
@@ -67,5 +72,12 @@ export class PlanListComponent {
       .subscribe((plans) => {
         this.plans = plans;
       });
+  }
+  openFilterForm() {
+    if (this.filterStatus === ElementStatusType.SHOW) {
+      this.filterStatus = ElementStatusType.HIDDEN;
+    } else {
+      this.filterStatus = ElementStatusType.SHOW;
+    }
   }
 }
