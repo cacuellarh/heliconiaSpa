@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, effect, inject } from '@angular/core';
 import { PlanService } from '../../services/plan.service';
 import { PlanDto } from '../../dto/plan-dto';
 import { CategoryType } from '../../types/category-type';
@@ -11,8 +11,9 @@ import { FormsModule } from '@angular/forms';
 import {
   ElementActiveDirective,
   ElementActiveService,
+  ElementStatusType,
+  ElementToggleService
 } from '@c-code/c-code-fw';
-import { ElementStatusType } from '../../../../commond/types/ElementStatus-type';
 
 @Component({
   selector: 'app-plan-list',
@@ -25,11 +26,12 @@ import { ElementStatusType } from '../../../../commond/types/ElementStatus-type'
   ],
   templateUrl: './plan-list.component.html',
   styleUrl: './plan-list.component.css',
-  providers: [ElementActiveService],
+  providers: [ElementActiveService,ElementToggleService],
 })
 export class PlanListComponent {
   private planService: PlanService = inject(PlanService);
   private destroyRef: DestroyRef = inject(DestroyRef);
+  private elementToggle: ElementToggleService = inject(ElementToggleService);
   public plans: PlanDto[] = [];
   public categorySelected: CategoryType = CategoryType.Individual;
   public CategoryType = CategoryType;
@@ -37,6 +39,9 @@ export class PlanListComponent {
   public ElementStatustype = ElementStatusType;
   public filterStatus: ElementStatusType = ElementStatusType.HIDDEN;
 
+  constructor(){
+    effect(() => this.filterStatus = this.elementToggle.elementStatusToggle())
+  }
   ngOnInit() {
     this.getPlans(this.categorySelected);
   }
@@ -74,10 +79,6 @@ export class PlanListComponent {
       });
   }
   openFilterForm() {
-    if (this.filterStatus === ElementStatusType.SHOW) {
-      this.filterStatus = ElementStatusType.HIDDEN;
-    } else {
-      this.filterStatus = ElementStatusType.SHOW;
-    }
+    this.elementToggle.toggleByElementStatusType(ElementStatusType.SHOW);
   }
 }

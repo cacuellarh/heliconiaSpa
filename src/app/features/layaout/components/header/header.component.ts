@@ -1,35 +1,58 @@
-import { Component, inject } from '@angular/core';
-import { LayaoutEventsService } from '../../services/layaout-events.service';
-import { MenuStatus } from '../../types/menu-status-type';
-import { CommonModule } from '@angular/common';
+import { Component, DestroyRef, effect, inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ElementActiveDirective } from '@c-code/c-code-fw';
+import {
+  ElementActiveDirective,
+  ElementStatusType,
+  ElementToggleService
+} from '@c-code/c-code-fw';
+
 import { ElementActiveService } from '@c-code/c-code-fw';
 import { whatsappMsgDefault } from '../../../../const/wsp-msg-const';
+import { ScreenWidthEventService } from '../../services/screen-width.service';
+import { ScreenWidthType } from '../types/screem_width-type';
 
 @Component({
   selector: 'app-header',
+  standalone: true, // 👈 ¡esto es clave!
   imports: [CommonModule, RouterModule, ElementActiveDirective],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
-  providers: [ElementActiveService],
+  styleUrls: ['./header.component.css'], // también aquí estaba mal: debe ser `styleUrls` no `styleUrl`
+  providers: [
+    ElementActiveService,
+    ElementToggleService,
+  ],
 })
 export class HeaderComponent {
-  private layaoutEvents: LayaoutEventsService = inject(LayaoutEventsService);
-  MenuStatus = MenuStatus;
-  public wspMsg:string = whatsappMsgDefault
-  public get menuStatus() {
-    return this.layaoutEvents.menuStatus();
-  }
+  public ElementStatusType = ElementStatusType;
+  public menuStatus!: ElementStatusType;
+  public wspMsg: string = whatsappMsgDefault;
+  private elementToggle: ElementToggleService = inject(ElementToggleService);
+  private screenEvents: ScreenWidthEventService = inject(
+    ScreenWidthEventService
+  );
+  private platformId = inject(PLATFORM_ID);
+  private destroyRef = inject(DestroyRef);
 
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenEvents.setPlatformId(this.platformId);
+      this.screenEvents.setDestroyRef(this.destroyRef);
+      this.screenEvents.setWindows(window);
+      this.screenEvents.executeFuncByScreenWidth(
+        this.closedMenu.bind(this),
+        ScreenWidthType.MD
+      );
+    }
+    effect(() => {
+      this.menuStatus = this.elementToggle.elementStatusToggle();
+    });
+  }
   openMenu() {
-    const newStatus =
-      this.menuStatus === MenuStatus.Open ? MenuStatus.Closed : MenuStatus.Open;
-
-    this.layaoutEvents.setMenuStatus(newStatus);
+    this.elementToggle.toggleByElementStatusType(ElementStatusType.SHOW);
   }
 
-  closedMenu(){
-    this.layaoutEvents.setMenuStatus(MenuStatus.Closed)
+  closedMenu() {
+    this.elementToggle.toggleByElementStatusType(ElementStatusType.HIDDEN);
   }
 }

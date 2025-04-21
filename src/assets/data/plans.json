@@ -52,7 +52,7 @@
         "cuantity": 2,
         "imgPath": "/assets/img/amatista.png",
         "category": 1,
-        "additionalServicesId": [123,105,114,115,124,104,106,109,110,108]
+        "additionalServicesId": [123,105,114,115,124,104,106,109,110,108,135]
     },
     {
         "id": 6,
@@ -63,7 +63,7 @@
         "cuantity": 2,
         "imgPath": "/assets/img/neroli.png",
         "category": 1,
-        "additionalServicesId": [101,105,114,122,113,115,117,125, 118,126,117,106,109,107,108,128]
+        "additionalServicesId": [101,105,114,122,113,115,117,125,118,126,106,109,107,108,128,134]
     },
     {
         "id": 7,
@@ -119,5 +119,27 @@
         "imgPath": "/assets/img/granate4.png",
         "category": 2,
         "additionalServicesId": [101,103,104,115,105, 113, 130,131,107,106,109,132,133]
+    },
+    {
+        "id": 12,
+        "description": "Ideal para celebrar aniversarios, cumpleaños o simplemente compartir un momento especial, este plan combina técnicas terapéuticas, aromas, sabores y un ambiente acogedor para conectar cuerpo, mente y emociones. Una pausa merecida para dos, llena de armonía, detalles y cuidado.",
+        "duration": "2 Horas 20 minutos",
+        "price": 219900,
+        "name": "PLAN CORNALINA",
+        "cuantity": 2,
+        "imgPath": "/assets/img/cornalina.png",
+        "category": 1,
+        "additionalServicesId": [123,114,137,127,105,106,124,109,136,138,139,140]
+    },
+    {
+        "id": 13,
+        "description": "Con una atmósfera delicadamente preparada y tratamientos diseñados para relajar cuerpo y mente, este plan es perfecto para regalarse tiempo de calidad juntos, desconectar del estrés y reconectar con el amor propio y compartido.",
+        "duration": "1 Hora 30 minutos",
+        "price": 119900,
+        "name": "PLAN LAVANDA",
+        "cuantity": 2,
+        "imgPath": "/assets/img/lavanda.png",
+        "category": 1,
+        "additionalServicesId": [134,138,114,104,107,105,106,109,108]
     } 
 ]

@@ -16,11 +16,10 @@
 
     <a class=" lg:hidden cursor-pointer" (click)="openMenu()"
       >
-      @if(menuStatus === MenuStatus.Closed){
-
-        <img src="assets/icons/menu.png" class="w-7" alt=""/>
-      }@else {
+      @if(menuStatus === ElementStatusType.SHOW){
         <img src="assets/icons/cerrar.png" class="w-6" alt=""/>
+      }@else {
+        <img src="assets/icons/menu.png" class="w-7" alt=""/>
       }
       </a>
   </div>
@@ -51,7 +50,7 @@
 
   <!-- //MOBILE MENU -->
   <div
-    *ngIf="menuStatus === MenuStatus.Open"
+    *ngIf="menuStatus === ElementStatusType.SHOW"
     class="flex justify-center h-auto lg:h-14 bg-primary items-center"
   >
     <ul

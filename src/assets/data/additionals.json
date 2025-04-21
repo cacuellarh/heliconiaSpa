@@ -158,5 +158,40 @@
         "id": 133,
         "iconPath": "/assets/icons/vino.png",
         "name": "4 Copas de vino"
+      },
+      {
+        "id": 134,
+        "iconPath": "/assets/icons/detox.png",
+        "name": "Sauna detox"
+      },
+      {
+        "id": 135,
+        "iconPath": "/assets/icons/cena.png",
+        "name": "Cena romantica"
+      },
+      {
+        "id": 136,
+        "iconPath": "/assets/icons/queso.png",
+        "name": "Tabla de quesos"
+      },
+      {
+        "id": 137,
+        "iconPath": "/assets/icons/chocolate.png",
+        "name": "Mascarilla de chocolate"
+      },
+      {
+        "id": 138,
+        "iconPath": "/assets/icons/masaje.png",
+        "name": "Exfoliacion corporal"
+      },
+      {
+        "id": 139,
+        "iconPath": "/assets/icons/tonico.png",
+        "name": "Tonico corporal"
+      },
+      {
+        "id": 140,
+        "iconPath": "/assets/icons/botellaVino.png",
+        "name": "Media botella de vino"
       }
 ]
