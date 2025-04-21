@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .action_btn{
     @apply bg-primary text-bg font-jost p-2 hover:bg-primary_light transition-all ease-linear duration-300
 }

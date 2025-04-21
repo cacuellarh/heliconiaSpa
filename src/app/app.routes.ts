@@ -39,4 +39,11 @@ export const routes: Routes = [
         '../app/features/reservation-policies/reservation-policies.component'
       ).then((p) => p.ReservationPoliciesComponent),
   },
+  {
+    path: 'galeria',
+    loadComponent: () =>
+      import(
+        '../app/features/galery/galery.component'
+      ).then((p) => p.GaleryComponent),
+  }
 ];
