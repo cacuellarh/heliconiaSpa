@@ -6,7 +6,7 @@
     <h1 class="font-messiri text-[3rem] font-primary text-center text-primary font-bold">Galeria de imagenes</h1>
   </div>
 
-  <div class="grid grid-cols-2 gap-4 lg:gap-10 lg:grid-cols-6 bg-[url('assets/img/details_bg.png')] bg-cover bg-center w-full p-3 lg:p-10 rounded-sm shadow-md">
+  <div class="grid grid-cols-2 gap-4 lg:gap-10 lg:grid-cols-6 bg-[url('assets/img/details_bg.png')] bg-cover bg-center w-full p-2 lg:p-10 rounded-sm shadow-md">
     <div *ngFor="let album of albums; let i = index" class="gallery-item">
       <img [src]="album.thumb" [alt]="album.caption" (click)="open(i)" />
     </div>
