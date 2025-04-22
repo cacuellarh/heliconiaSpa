@@ -31,10 +31,10 @@ export class BoutiqueComponent {
 
   constructor() {
     this.clothes = new Map<ClothesType, string[]>([
-      [ClothesType.A_PASO_FINO, ['a_paso_fino/1.jpg', 'a_paso_fino/5.jpg', 'a_paso_fino/6.jpg']],
-      [ClothesType.ENCANTO_REAL, ['encanto_real/1.png']],
-      [ClothesType.ESCENCIA_CASUAL, ['escencia_casual/1.png','escencia_casual/2.png','escencia_casual/3.png']],
-      [ClothesType.FUEGO_TROPICAL, ['fuego_tropical/1.png','fuego_tropical/2.png']],
+      [ClothesType.A_PASO_FINO, ['a_paso_fino/1.webp', 'a_paso_fino/5.webp', 'a_paso_fino/6.webp']],
+      [ClothesType.ENCANTO_REAL, ['encanto_real/1.webp']],
+      [ClothesType.ESCENCIA_CASUAL, ['escencia_casual/1.webp','escencia_casual/2.webp','escencia_casual/3.webp']],
+      [ClothesType.FUEGO_TROPICAL, ['fuego_tropical/1.webp','fuego_tropical/2.webp']],
     ]);
   }
 

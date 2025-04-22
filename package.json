@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:heliconiaSpa": "node dist/heliconia-spa/server/server.mjs"
+    "serve:ssr:heliconiaSpa": "node dist/heliconia-spa/server/server.mjs",
+    "convert:images": "imagemin src/assets/**/*.{jpg,png} --plugin=webp --out-dir=src/assets-webp"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,9 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "autoprefixer": "^10.4.21",
+    "imagemin": "^9.0.1",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-webp": "^8.0.0",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
