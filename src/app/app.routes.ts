@@ -45,5 +45,12 @@ export const routes: Routes = [
       import(
         '../app/features/galery/galery.component'
       ).then((p) => p.GaleryComponent),
+  },
+  {
+    path: 'boutique',
+    loadComponent: () =>
+      import(
+        '../app/features/boutique/boutique.component'
+      ).then((p) => p.BoutiqueComponent)
   }
 ];

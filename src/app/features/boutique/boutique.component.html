@@ -1,1 +1,50 @@
-<p>boutique works!</p>
+<app-header-size-wrapper></app-header-size-wrapper>
+
+<div
+  class="w-full lg:px-44 gap-16 flex flex-col justify-center mt-10 py-10 "
+>
+  <div class="w-full">
+    <h1
+      class="font-messiri text-[1.7rem] lg:text-[3rem] font-primary text-center text-primary font-bold"
+    >
+      My Lady Boutique
+    </h1>
+  </div>
+
+  <div class="w-full px-10">
+    <ul class="flex flex-col lg:flex-row w-full justify-center lg:gap-14">
+      <li appElementActive class="hover:border-b-2 border-black py-2 cursor-pointer border-b-2 border-transparent" (click)="changeClothesType(ClothesType.A_PASO_FINO)">
+        <a
+          class="menu_boutique"
+          >A PASO FINO</a
+        >
+      </li>
+      <li appElementActive class="hover:border-b-2 border-black py-2 cursor-pointer border-b-2 border-transparent" (click)="changeClothesType(ClothesType.ENCANTO_REAL)">
+        <a
+          class="menu_boutique"
+          >ENCANTO REAL</a
+        >
+      </li>
+      <li appElementActive class="hover:border-b-2 border-black py-2 cursor-pointer border-b-2 border-transparent" (click)="changeClothesType(ClothesType.ESCENCIA_CASUAL)">
+        <a
+          class="menu_boutique"
+          >ESCENCIA CASUAL</a
+        >
+      </li>
+      <li appElementActive class="hover:border-b-2 border-black py-2 cursor-pointer border-b-2 border-transparent" (click)="changeClothesType(ClothesType.FUEGO_TROPICAL)">
+        <a
+          class="menu_boutique"
+    
+          >FUEGO TROPICAL</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0 px-10 lg:px-44 justify-items-center">
+    <app-clothes-card
+      *ngFor="let item of clothesChoosed.get(clothesType)"
+      [imageUrl]="item"
+    ></app-clothes-card>
+  </div>
+</div>

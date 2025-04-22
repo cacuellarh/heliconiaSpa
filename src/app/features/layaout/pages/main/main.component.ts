@@ -15,7 +15,6 @@ import { RouterModule } from '@angular/router';
     HeaderSizeWrapperComponent,
     UsComponent,
     SeparatorComponent,
-    FooterComponent,
     WhatsappApiComponent,
     RouterModule
 ],
