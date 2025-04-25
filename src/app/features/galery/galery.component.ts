@@ -16,10 +16,10 @@ export class GaleryComponent {
 
   constructor(private lightbox: Lightbox) {
     // Configuración de las imágenes de la galería
-    for (let i = 1; i <= 8; i++) {
-      const src = `assets/img/galery/${i}.jpeg`;
+    for (let i = 1; i <=28; i++) {
+      const src = `assets/img/galery/${i}.webp`;
       const caption = `Imagen ${i}`;
-      const thumb = `assets/img/galery/${i}.jpeg`;
+      const thumb = `assets/img/galery/${i}.webp`;
       const album = {
         src: src,
         caption: caption,
@@ -30,12 +30,10 @@ export class GaleryComponent {
   }
 
   open(index: number): void {
-    // Abre la galería en la imagen seleccionada
     this.lightbox.open(this.albums, index);
   }
 
   close(): void {
-    // Cierra la galería
     this.lightbox.close();
   }
 }
