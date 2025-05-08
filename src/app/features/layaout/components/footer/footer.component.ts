@@ -8,5 +8,5 @@ import { SocialMediaComponent } from "../social-media/social-media.component";
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  public email : string = "Claudiapatriciaosoriospa@gmail.com";
+  public email : string = "heliconiaspanva@gmail.com";
 }
